@@ -2,7 +2,7 @@
 <div class="BookList">
   <h1>{{title}}</h1>
   <ul>
-    <li v-for="book in books">{{book.title, book.author}}</li>
+    <li v-for="book in books">{{book.title}}, {{book.author}}</li>
   </ul>
 </div>
 </template>
@@ -10,7 +10,7 @@
 <script>
     export default {
         name: "BookList",
-        methods {
+        methods: {
           books: [
             {title: 'Self-Reliance', author: 'Ralph Waldo Emerson'},
             {title: 'American Gods', author: 'Neil Gaiman'},
@@ -21,10 +21,8 @@
       return {
         title: 'All Books'
       },
-
       }
     }
-}
 </script>
 
 <style scoped>
